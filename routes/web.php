@@ -1,10 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SuperAdmin\DashboardsuperadminController;
-use App\Http\Controllers\SuperAdmin\DataAdminController;
-use App\Http\Controllers\SuperAdmin\DataMahasiswaController;
-use App\Http\Controllers\SuperAdmin\ItemController;
+use App\Http\Controllers\Admin\DashboardsuperadminController;
+use App\Http\Controllers\Admin\InformasiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,12 +32,12 @@ Route::middleware('auth')->group(function () {
     //     Route::get('/Superadmin', function () { 
     //         return view('Superadmin.Superadmin');
     //     });
-        Route::resource('/admins', \App\Http\Controllers\SuperAdmin\DataAdminController::class);
-        Route::resource('/items', \App\Http\Controllers\SuperAdmin\ItemController::class);
-        Route::get('/Barang/item', [ItemController::class, 'index'])->name('item.index');
-        Route::get('/Pengguna/Dataadmin', [DataAdminController::class, 'index'])->name('dataadmin.index');
-        Route::get('/Pengguna/Datamahasiswa', [DataMahasiswaController::class, 'index'])->name('datamahasiswa.index');
+        
         Route::get('/dashboard', [DashboardsuperadminController::class, 'index'])->name('dashboardsuperadmin.index');
+        Route::get('/informasi', [InformasiController::class, 'index'])->name('informasi.index');
+        Route::resource('/informasis', \App\Http\Controllers\Admin\InformasiController::class);
+
+
 
     });
 

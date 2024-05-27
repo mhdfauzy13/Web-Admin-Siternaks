@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\SuperAdmin;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -9,6 +9,6 @@ class DashboardsuperadminController extends Controller
 {
     public function index()
     {
-        return view('Superadmin.dashboard');
+        return view('Admin.dashboard');
     }
 }

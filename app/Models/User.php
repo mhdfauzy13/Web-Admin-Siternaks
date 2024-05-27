@@ -46,8 +46,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-    public function admin(): HasOne
-    {
-        return $this->hasOne(Admin::class, 'id');
-    }
+    // public function admin(): HasOne
+    // {
+    //     return $this->hasOne(Peternak::class, 'id');
+    // }
 }

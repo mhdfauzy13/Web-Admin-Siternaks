@@ -5,13 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Student extends Model
+class Informasi extends Model
 {
     use HasFactory;
-
+    /**
+     * fillable
+     *
+     * @var array
+     */
     protected $fillable = [
-        'nim',
-        'departement',
-        'class'
+        'judul',
+        'gambar',
+        'deskripsi',
     ];
 }
