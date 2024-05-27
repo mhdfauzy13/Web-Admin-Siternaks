@@ -3,7 +3,7 @@
 @section('content')
     <div class=" lg:ml-[250px] mt-10">
         <div class=" font-bold ">
-            <h3>DATA Informasi</h3>
+            <h3>Data Informasi</h3>
         </div>
         <div class="flex justify-end mb-3">
             <a href={{ route('informasis.create') }}>
