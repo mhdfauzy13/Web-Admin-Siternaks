@@ -39,7 +39,8 @@
                                     <tr>
                                         <td
                                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
-                                            {{ \Illuminate\Support\Str::limit($informasi->judul, $limit = 15, $end = '...') }}
+                                            {{ \Illuminate\Support\Str::limit($informasi->judul, $limit = 15
+                                            , $end = '...') }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
 
