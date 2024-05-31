@@ -15,8 +15,8 @@
     <main class="w-full max-w-md mx-auto p-6">
         <div class="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
             <div class="flex flex-col items-center mx-auto">
-                <img src="../assets/image/polindra.png" alt="" class="w-[120px] mt-4">
-                <h3 class="font-bold text-center mt-4">SISLAB POLINDRA</h3>
+                <img src="../assets/image/logositernaks.png" alt="" class="w-[120px] mt-4">
+                <h3 class="font-bold text-center mt-4">SITERNAKS</h3>
             </div>
 
             <div class="p-4 sm:p-7">

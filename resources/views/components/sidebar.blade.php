@@ -57,7 +57,7 @@
                         <ul class="hs-accordion-group ps-3 pt-2" data-hs-accordion-always-open>
                             <li class="hs-accordion" id="users-accordion-sub-1">
                                 <a class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-white hs-accordion-active:hover:bg-transparent text-sm text-gray-400 rounded-lg hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-1 focus:ring-gray-600"
-                                    {{-- href={{ route('dataadmin.index') }} --}}
+                                    href={{ route('datapeternak.index') }}
                                     >
                                     Data Peternak
                                     <svg class="hs-accordion-active:block ms-auto hidden w-4 h-4"
@@ -93,6 +93,18 @@
                         </div>
 
                         Informasi
+                    </a>
+                </div>
+
+                <div>
+                    <a
+                        class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-lg hover:bg-gray-800 hover:text-white-300 focus:outline-none focus:ring-1 focus:ring-gray-600"
+                        href="{{ route('modelhewan.index') }}">
+                        <div>
+                            <img src="../assets/icon/model.png" alt="" style="filter: invert(100%);">
+                        </div>
+
+                        Model
                     </a>
                 </div>
 

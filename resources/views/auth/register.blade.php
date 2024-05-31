@@ -14,8 +14,8 @@
     <main class="w-full max-w-md mx-auto p-6">
         <div class="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
             <div class="flex flex-col items-center mx-auto">
-                <img src="../assets/image/polindra.png" alt="" class="w-[120px] mt-4">
-                <h3 class="font-bold text-center mt-4">SISLAB POLINDRA</h3>
+                <img src="../assets/image/logositernaks.png" alt="" class="w-[120px] mt-4">
+                <h3 class="font-bold text-center mt-4">SITERNAKS</h3>
             </div>
 
             <div class="p-4 sm:p-7">
@@ -50,6 +50,24 @@
                             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email"
                                 :value="old('email')" required autocomplete="username" />
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                        </div>
+                        
+                        
+                        <!-- Nama Peternakan -->
+                        <div>
+                            <x-input-label for="nama_peternakan" :value="__('Nama_peternakan')" />
+                            <x-text-input id="nama_peternakan" class="block mt-1 w-full" type="text" name="nama_peternakan"
+                                :value="old('nama_peternakan')" required autofocus autocomplete="nama_peternakan" />
+                            <x-input-error :messages="$errors->get('nama_peternakan')" class="mt-2" />
+                        </div>
+
+                        
+                        <!-- Alamat -->
+                        <div>
+                            <x-input-label for="alamat" :value="__('Alamat')" />
+                            <x-text-input id="alamat" class="block mt-1 w-full" type="text" name="alamat"
+                                :value="old('alamat')" required autofocus autocomplete="alamat" />
+                            <x-input-error :messages="$errors->get('alamat')" class="mt-2" />
                         </div>
 
                         <!-- Password -->
