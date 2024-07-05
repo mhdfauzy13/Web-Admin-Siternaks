@@ -121,4 +121,10 @@ class InformasiController extends Controller
             ->route('informasis.index')
             ->with(['success' => 'Data berhasil dihapus!']);
     }
+
+    public function apiIndex()
+{
+    return response()->json(Informasi::all());
+}
+
 }

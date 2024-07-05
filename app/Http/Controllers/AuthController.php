@@ -34,31 +34,29 @@ class AuthController extends Controller
         ]);
     }
     public function register(Request $request)
-    {
-        $request->validate([
-            'name' => ['required'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
-            'nama_peternakan' => ['required', 'string', 'max:255'],
-            'alamat' => ['required', 'string', 'max:255'],
-            'password' => ['required'],
-        ]);
+{
+    $request->validate([
+        'name' => ['required'],
+        'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
+        'nama_peternakan' => ['required', 'string', 'max:255'],
+        'alamat' => ['required', 'string', 'max:255'],
+        'password' => ['required', 'string', 'min:8'],
+    ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'nama_peternakan' => $request->nama_peternakan,
-            'alamat' => $request->alamat,
-            'password' => $request->password,
-        ]);
+    $user = User::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'nama_peternakan' => $request->nama_peternakan,
+        'alamat' => $request->alamat,
+        'password' => Hash::make($request->password),
+    ]);
 
-        event(new Registered($user));
- 
-        Auth::login($user);
+    event(new Registered($user));
 
-        return response()->json([
-            'massage'=>true,
-            'data'=>$user
-        ]);
+    return response()->json([
+        'message' => 'Registration successful',
+        'user' => $user,
+    ], 201);
+}
 
-    }
 }

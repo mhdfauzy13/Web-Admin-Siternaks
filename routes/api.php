@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Admin\ModelhewanController;
+use App\Http\Controllers\Admin\InformasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
-
+Route::get('/informasis', [InformasiController::class, 'apiIndex']);
+Route::post('/uploadgambar', [ModelhewanController::class, 'uploadImage'])->name('uploadgambar');

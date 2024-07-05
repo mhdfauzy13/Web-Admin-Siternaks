@@ -8,7 +8,7 @@
             <p class="text-gray-700 text-lg"><span class="font-semibold">Persentase:</span> {{ $data['Persentase'] }}</p>
         </div>
         <div>
-            <h1 class="text-2xl font-bold mb-4">Hasil Esitmasi Berat Hewan</h1>
+            <h1 class="text-2xl font-bold mb-4">Hasil Estimasi Berat Hewan</h1>
             <div class="mb-4">
                 <p class="text-gray-700 text-lg"><span class="font-semibold">Estimasi Berat:</span>
                     {{ $data['Estimasi Berat'] }}</p>

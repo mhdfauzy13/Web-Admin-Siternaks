@@ -22,11 +22,10 @@ class ModelhewanController extends Controller
     public function uploadImage(Request $request)
 {
     $request->validate([
-        'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-    ]);
-
+    'file' => 'required|image|mimes:jpeg,png,jpg,gif|max:10485', // maksimum 10MB
+]);
     try {
-        $image = $request->file('image');
+        $image = $request->file('file');
         $imagePath = $image->getPathname();
         $imageName = $image->getClientOriginalName();
 
@@ -47,10 +46,11 @@ class ModelhewanController extends Controller
             throw new \Exception("Invalid response from API");
         }
 
-        return view('Admin.Model.result', compact('data'));
+        return response()->json($data);
+
     } catch (\Exception $e) {
         Log::error('Error uploading image: ' . $e->getMessage());
-        return redirect()->back()->with('error', 'There was an error uploading the image: ' . $e->getMessage());
+        return response()->json(['error' => 'There was an error uploading the image: ' . $e->getMessage()], 500);
     }
 }
 
